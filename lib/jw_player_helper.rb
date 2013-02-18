@@ -18,8 +18,8 @@ if defined?(Rails)
       FileUtils.cp_r File.join(gem_root, "assets", "javascripts"), Rails.root.join("public")
     end
 
-    swf_file = Rails.root.join("public", "swf", "player.swf")
-    gem_swf_file = Pathname.new(File.join(gem_root, "assets", "swf", "player.swf"))
+    swf_file = Rails.root.join("public", "swf", "new_player.swf")
+    gem_swf_file = Pathname.new(File.join(gem_root, "assets", "swf", "new_player.swf"))
 
     if !File.exists?(swf_file) or swf_file.size != gem_swf_file.size
       puts "Copying SWF files to public/swf"
